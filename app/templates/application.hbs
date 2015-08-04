@@ -1,3 +1,23 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+<h2 id="title">Welcome to Naperville</h2>
+{{esri-map}}
+<h2>Shelters</h2>
+<a href='#' {{action 'filterShelters' 'Open'}}>Open</a>
+<a href='#' {{action 'filterShelters' 'Closed'}}>Closed</a>
+<a href='#' {{action 'filterShelters' 'Full'}}>Full</a>
+<br><br>
+<table>
+  <tbody>
+    {{#each shelters as |shelter|}}
+    <tr>
+      <td>
+        {{#if shelter.symbolUrl}}
+          <img src={{shelter.symbolUrl}} class='shelter-symbol'>
+        {{/if}}
+      </td>
+      <td>
+        {{if shelter.name shelter.name 'UNNAMED'}}
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -10,16 +10,14 @@
     {{content-for 'head'}}
 
     <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
     <link rel="stylesheet" href="assets/naperville.css">
 
     {{content-for 'head-footer'}}
   </head>
   <body>
+    {{content-for 'amd'}}
     {{content-for 'body'}}
-
-    <script src="assets/vendor.js"></script>
-    <script src="assets/naperville.js"></script>
-
     {{content-for 'body-footer'}}
   </body>
 </html>
