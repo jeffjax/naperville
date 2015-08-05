@@ -16,7 +16,7 @@ export default Ember.Component.extend({
     const sheltersUrl = 'http://sampleserver6.arcgisonline.com/arcgis/rest/services/NapervilleShelters/FeatureServer/0';
     const sheltersLayer = new FeatureLayer(sheltersUrl);
     
-    sheltersLayer.on('load', event => {
+    sheltersLayer.on('load', () => {
       this.get('sheltersService').set('featureLayer', sheltersLayer);
     });
 
